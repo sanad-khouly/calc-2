@@ -1,0 +1,39 @@
+<html>
+    <head> 
+
+    </head>
+    <body>
+       <p>Number 1</p>
+        <input type="text" id="get"> <br>
+        <p>Number 2</p>
+        <input type="text" id="get1"> <br>
+        Equation : <select  id="get2">
+            <option value="+"> adding +</option>
+            <option value="-">subtraction -</option>
+            <option value="*">multiply *</option>
+            <option value="/">divide /</option>
+        </select> <br>
+        <button onclick="calc()">submit</button> <br>
+        <p id="par1"></p>
+        <script>
+            function calc(){
+                let x = Number(document.querySelector("#get").value)
+                let y = Number(document.querySelector("#get1").value)
+                let z = document.querySelector("#get2").value
+                let res ;
+                if (z == "+")
+                 res = x + y 
+                if (z == "-")
+                 res = x - y
+                if (z == "*")
+                 res = x * y
+                if (z == "/")
+                 res = x / y
+                document.querySelector("#par1").innerHTML = res
+                
+
+                
+            }
+        </script>
+    </body>
+</html>
